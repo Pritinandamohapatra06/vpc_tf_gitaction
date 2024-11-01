@@ -24,13 +24,13 @@ jobs:
       - name: terraform Init
         id: init
         run: terraform init
-        working-directory: ./Terraform-VPC
+        working-directory: ./Terraform-vpc
       - name: Terrafor validate
         id: validate
         run: terraform validate
-        working-directory: ./Terraform-VPC
+        working-directory: ./Terraform-vpc
       - name: Terraform Plan
         id: apply
         run: terraform apply --auto-approve
-        working-directory: ./Terraform-VPC      
+        working-directory: ./Terraform-vpc      
 
