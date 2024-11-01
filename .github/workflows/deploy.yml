@@ -30,7 +30,11 @@ jobs:
         run: terraform validate
         working-directory: ./Terraform-vpc
       - name: Terraform Plan
-        id: apply
-        run: terraform apply --auto-approve
+        id: plan
+        run: terraform plan
         working-directory: ./Terraform-vpc      
+      - name: Terraform Apply
+        id: apply
+        run: terraform destroy --auto-approve
+        working-directory: ./Terraform-vpc
 
